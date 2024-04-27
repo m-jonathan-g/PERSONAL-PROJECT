@@ -7,7 +7,7 @@ module.exports = {
          scheme: {
           light: '#06141b',
           default:'#11212d',
-          dark: '#ffefd5',
+          dark: '#b06500',
          }
       },
       screens: {
