@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jonathan Mugo</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
+    <link rel="shortcut icon" href="img/icons8-person-16.png" type="image/x-icon">
 </head>
 <body class="min-h-screen bg-slate-200 dark:bg-slate-900 dark:text-white m-0" >
     <header class="bg-scheme-light sticky top-0  z-10">
@@ -15,21 +16,33 @@
                 <a href="#hero">📚Welcome To My Portfolio</a>
             </h1>
             <div>
-                <button id="mobile-open-button" class="text-3xl sm:hidden focus:outline-none">
+                <button id="hamburger-button" class="text-4xl md:hidden cursor-pointer">
                     &#9776;
                 </button>
-                <nav class="hidden sm:flex justify-between space-x-8 text-xl" aria-label="main">
-                    <a href="#about" class="hover:underline">About</a>
-                    <a href="#miniprojects" class="hover:underline">Projects</a>
-                    <a href="#contact" class="hover:underline">Contact</a>
+                <nav class="hidden md:block justify-between space-x-8 text-xl text-white" aria-label="main">
+                    <a href="#about" class="hover:text-scheme-dark">About</a>
+                    <a href="#projects" class="hover:text-scheme-dark">Projects</a>
+                    <a href="#contact" class="hover:text-scheme-dark">Contact</a>
                 </nav>
             </div>
+        </section>
+        <section id="mobile-menu" class="absolute top-0 bg-scheme-light w-full text-5xl  flex-col justify-content-center origin-top animate-open-menu hidden">
+            <button class="text-8xlx self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8" aria-label="mobile">
+                <a href="#about" class="w-full text-center py-8 hover:text-scheme-dark">About</a>
+                <a href="#projects" class="w-full text-center py-8 hover:text-scheme-dark">Projects</a>
+                <a href="#contact" class=" w-full text-center py-8 hover:text-scheme-dark">Contact</a>
+                <a href="#footer" class="w-full text-center py-8 hover:text-scheme-dark">Legal</a>
+
+            </nav>
         </section>
     </header>
     <main class="max-w-4xl mx-auto">
         <section id="hero" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40">
             <article>
-                <h2 class="max-w-md text-3xl mt-4 text-center sm:text-4xl text-slate-900 dark:text-white ">
+                <h2 class=" animate-bounce max-w-md text-3xl mt-4 text-center sm:text-4xl text-white">
                     I AM <span class="text-scheme-default dark:text-cyan-500">JONATHAN MUGO</span>
                 </h2>
             </article>
@@ -38,12 +51,13 @@
             <hr class=" mx-auto bg-black dark:bg-white w-1/2">
 
          <section class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-mt-40">>
-            <article  class="sm:w-1/2">
+            <article>
                 <div class="relative overflow-hidden">
                 <img src="img/Best 500+ Camera Photos [HD] _ Download Free Images & Stock Photos On Unsplash.jpeg" alt="Photography" class="transition-transform duration-2000 transform translate-x-full animate-slide-in">
                </div>
-                <p class="max-w-md text-2xl mt text-center sm:text-right text-slate-900 dark:text-slate-500">
-                    The picture represents my love for photography and represents looking at the world from different lenses"perspective to see the beauty around us  
+                <p class="max-w-md text-2xl mt text-start sm:text-left text-slate-900 dark:text-slate-500">
+              
+                    <q><strong>In the world of photography, each frame captures a unique perspective, revealing layers of meaning and emotion within its composition. Just as a photograph tells a story through the lens of a camera, so too does it reflect the essence of the one who wields it. I am like a photograph, a blend of light and shadow, capturing moments that define me. In the intricate dance between aperture and shutter speed, I find parallels to the balance I seek in life  between spontaneity and careful planning, between embracing the present moment and cherishing memories of the past.</strong></q>
                 </p>
             </article>
         </section>
@@ -51,26 +65,26 @@
          <hr class="mx-auto bg-black dark:bg-white w-1/2">
 
          <section id="about" class="p-6 my-12 scroll-mt-20">
-            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">About Me</h2>
+            <h2 class=" animate-bounce text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">About Me</h2>
             <p>
                 <img src="img/me.jpg" alt="Me" class="w-1/2 transition-transform duration-2000 transform translate-x-full animate-slide-in" data-aos="slide-in">
             </p>
             <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-900 dark:text-white gap-3">
-                Hello there, I am Jonathan Mugo and welcome to my Portfolio. I am a vibrant and creative person seeking to explore the world and fill my skillset with the most important and upcoming skills. I seek to increase my knowledge im the many different aspects that life has to offer.Get to know more about more through this portfolio.
+                Hello there, I am Jonathan Mugo and welcome to my Portfolio.I am a vibrant and creative person seeking to explore the world and fill my skillset with the most important and upcoming skills. I seek to increase my knowledge im the many different aspects that life has to offer.Get to know more about more through this portfolio.
             </p>
 
             <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row justify-start gap-3 flex-grow">
-                <li  class=" flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-scheme-default dark:bg-cyan-800 py-6 px-2">
-                    <h3 class="text-3xl text-center text-slate-900 dark:text-white">Background</h3>
-                    <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-900 dark:text-white gap-3">
+                <li  class=" animate-pulse flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-cyan-950 dark:bg-teal-800 py-6 px-2">
+                    <h3 class="text-3xl text-center text-scheme-dark dark:text-white font-serif font-bold">Background</h3>
+                    <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-white dark:text-white gap-3">
                         I was born and raised in the country of Kenya in the country of Kajiado. I am currently a post Secondary student from Kagumo Highschool and I'm waiting for admission into the university of choice to pursue a career in Medicene and Surgery.
                     </p>
-                    <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-900 dark:text-white gap-3">
+                    <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-white dark:text-white gap-3">
                         I am currently interested in the technology of computers, coding and web and game development and thus I decided to take the rare opportunity presented by the DirectEd Dev as I seek to expand my knowledge and skillset in this field.
-                <li  class=" flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-scheme-default dark:bg-cyan-800 py-6 px-2 flex-grow">
-                    <h3 class="text-3xl text-center text-slate-900 dark:text-white">Hobbies and Skills</h3>
+                <li  class="animate-pulse flex flex-col items-center border border-solid border-slate-900 dark:border-gray-100 bg-cyan-950 dark:bg-scheme-dark py-6 px-2 flex-grow">
+                    <h3 class="text-3xl text-center text-scheme-dark dark:text-white font-bold font-serif">Hobbies and Skills</h3>
                     <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-900 dark:text-white gap-3">
-                        <ol class="list-disc list-inside  p-2 mt-1 text-left max-w-md text-2xl  text-slate-900 dark:text-white gap-3">
+                        <ol class="list-disc list-inside  p-2 mt-1 text-left max-w-md text-2xl text-white dark:text-white gap-3">
                             <li>Learning Languages. I am partly fluent Japanese and  Spanish and I can write in Japanese. I am also looking to learn Mandarin, French and Arabic</li>
                             <li>
                                 Coding. I am taking a programming course to be skilled in programming. 
@@ -88,15 +102,85 @@
          </section>
 
          <hr class="mx-auto bg-black dark:bg-white w-1/2">
-         <section id="Projects">
-            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white">Mini Projects</h2>
-                <a href="projects.hmtl"></a>
-         </section>            
 
-         
+         <section id="projects"  class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-20 p-6">
+            <h2 class="text-4xl font-bold text-center sm:text-5xl mb-6 text-slate-900 dark:text-white animate-bounce">Mini Projects</h2>
+            <h3 class="text-3xl text-center text-slate-900 dark:text-slate-400">Below are some of the projects I have created within my first two weeks as a DirectEd Scholar</h3>
+          <figure class="my-12">
+             <blockquote class="relative rounded-3xl bg-scheme-default py-12 pl-14 pr-8 dark:bg-cyan-950">
+                <img  src="img/000.png" alt="Little Taco Shop">
+                <p  class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-200 dark:text-white gap-3">
+                    The Little Taco shop was a website that I build on my first week using basic HTML that I heard learned. I was able to complete this project without any prior knowledge of HTML before the DirectEd Experience.The Little Taco Shop is a simple website that includes the About page of the shop, a Menu, a Store hours page and a Contact Page using plain HTML.
+                 </p>
+                 <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-200 dark:text-white gap-3">
+                    <a href="https://github.com/m-jonathan-g/littletacohtml" class="hover:text-scheme-dark animate-bounce">View Project 🢅</a>
+                 </p>
+             </blockquote>
+            </figure>
+            <figure class="my-12">
+             <blockquote class="relative rounded-3xl bg-scheme-default py-12 pl-14 pr-8 dark:bg-teal-800">
+                <img src="img/fotor-ai-20240426211131.jpg" alt="Little Taco Shop">
+                <p  class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-200 dark:text-white gap-3">
+                  The above project is an upgraded version of the initial Little Taco Shop website. This project entailed the initial HTML. What's New? This project also entail CSS alongside the initial HTML. The CSS helped in adding more styling To the original to increase visual appeal.
+                 </p>
+                 <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-200 dark:text-white gap-3">
+                   <a href="https://github.com/m-jonathan-g/littletacocss" class="hover:text-scheme-dark animate-bounce">View Project 🢅</a>
+                 </p>
+             </blockquote>
+            </figure>
+            <figure class="my-12">
+             <blockquote class="relative rounded-3xl bg-scheme-default py-12 pl-14 pr-8 dark:bg-cyan-950">
+                <img src="img/rockets-poster_63832888.png" alt="Acme Rockets">
+                <p  class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-200 dark:text-white gap-3">The above Acme Rockets project is a website for popular rockets that can be used for transportation. This projects is a mjaor upgrade fromm the first two Little Taco Shop Websites. It is build using Tailwind which is like a modern and easy to use CSS to apply the styling and HTML for the structure. It also includes minimal Javascript to increase functionality
+                 </p>
+                 <p class="flex flex-col sm:flex-row p-2 mt-1 text-left max-w-md text-2xl  text-slate-200 dark:text-white gap-3">
+                    <a href="https://github.com/m-jonathan-g/tailwind_tut" class="hover:text-scheme-dark animate-bounce">View Project 🢅</a>
+                 </p>
+             </blockquote>
+            </figure>
+    
+         <hr class="mx-auto bg-black dark:bg-white w-1/2">
+
+         <section id="contact" class="widescreen:section-min-height tallscreen:section-min-height my-12 scroll-mt-16 p-6">
+            <h2 class="mb-6 text-center text-4xl font-bold text-slate-900 dark:text-white sm:text-5xl">
+                Contact Me ☎ 
+              </h2>
+              <form action="" class="items-left mx-auto flex max-w-4xl flex-col gap-4 text-2xl sm:text-3xl">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required minlength="3" maxlength="60" placeholder="Your name"
+                  class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black bg-slate-300 sm:text-3xl" />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required minlength="3" maxlength="60" placeholder="Your email"
+                  class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black  sm:text-3xl bg-slate-300" />
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required
+                  class="w-full rounded-xl border border-solid border-slate-900 p-3 text-2xl text-black  sm:text-3xl bg-slate-300"></textarea>
+                <button
+                  class="w-48 rounded-xl border border-solid border-slate-900 bg-cyan-900 p-3 text-white hover:bg-scheme-dark active:bg-scheme-dark dark:border-none">
+                  Submit
+                </button>
+              </form>
+            </section>      
     </main>
-    <footer>
-
+    <footer id="footer" class="bg-teal-500 dark:bg-cyan-950 text-xl text-white">
+        <address class="p-4">
+            <h2>Jonathan Mugo</h2>
+            Link Road<br />
+            Mtwapa, Mombasa 12345<br />
+            Email:
+            <a href="mailto:inquiries@acmerockets.com">Jonathan72@yahoo.com</a><br />
+            Phone: <a href="tel:+15555555555">(254) 123-4567</a>
+        </address>
+    
+          <nav class="animate-pulse p-4 sm:flex justify-start" aria-label="footer">
+            <a href="https://www.instagram.com/" class="hover:opacity-70"><img src="img/icons8-instagram-48.png" alt=""></a>
+            <a href="https://twitter.com/?lang=en" class="hover:opacity-70"><img src="img/icons8-twitterx-45.png" alt=""></a>
+          </nav>
+          <div class="flex flex-col sm:gap-2 p-4">
+            <p class="text-right">Copyright &copy; <span id="year">2022</span></p>
+            <p class="text-right">All Rights Reserved</p>
+          </div>
+        </section>
     </footer>
 
 </body>
