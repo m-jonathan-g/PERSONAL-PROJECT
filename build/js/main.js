@@ -1,10 +1,18 @@
 
-document.addEventListener('visibilitychange', function() {
-  if (document.visibilityState === 'visible') {
-    // Trigger animation
-    const image = document.querySelector('[data-aos="slide-in"]');
-    image.classList.add('animate-slide-in');
+const initApp = () => {
+  const hamburgerBtn = document.getElementById('hamburger-button')
+  const mobileMenu = document.getElementById('mobile-menu')
+
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('hidden')
+    mobileMenu.classList.toggle('flex')
+    hamburgerBtn.classList.toggle('toggle-btn')
   }
-});
+
+  hamburgerBtn.addEventListener('click', toggleMenu)
+  mobileMenu.addEventListener('click', toggleMenu)
+}
+
+document.addEventListener('DOMContentLoaded', initApp)
 
 
